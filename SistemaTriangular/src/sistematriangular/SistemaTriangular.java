@@ -33,4 +33,47 @@ public class SistemaTriangular {
         
 
     }
+
+    public int[] getColunaResultado() {
+        return colunaResultado;
+    }
+
+    public void setColunaResultado(int[] colunaResultado) {
+        this.colunaResultado = colunaResultado;
+    }
+
+    public int getPivo() {
+        return pivo;
+    }
+
+    public void setPivo(int pivo) {
+        this.pivo = pivo;
+    }
+
+    public void calculaMultiplicador() {
+        multiplicador2 = matriz[1][0] / pivo;
+        multiplicador3 = matriz[2][0] / pivo;
+    }
+
+    public boolean obterPivo() {
+        if (matriz[0][0] != 0) {
+            pivo = matriz[0][0];
+        } else if (matriz[1][0] != 0) {
+            pivo = matriz[1][0];
+        } else if (matriz[2][0] != 0) {
+            pivo = matriz[2][0];
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    public int[][] getMatriz() {
+        return matriz;
+    }
+
+    public void setMatriz(int[][] matriz) {
+        this.matriz = matriz;
+    }
+
 }
